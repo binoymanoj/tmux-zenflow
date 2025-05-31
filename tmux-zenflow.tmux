@@ -11,7 +11,7 @@ default_pdf_key="@zenflow-pdf-key"
 
 # Get user-defined keys or use defaults
 sessionizer_key=$(tmux show-option -gqv "$default_sessionizer_key")
-sessionizer_key=${sessionizer_key:-"f"}
+sessionizer_key=${sessionizer_key:-"z"}
 
 new_session_key=$(tmux show-option -gqv "$default_new_session_key")
 new_session_key=${new_session_key:-"F"}
