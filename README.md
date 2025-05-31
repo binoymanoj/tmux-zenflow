@@ -2,8 +2,8 @@
 
 A tmux plugin for zen workflow management - quickly navigate directories with sessionizer and open PDFs in a beautiful popup interface.
 
-[Locaion Browsing]("./assets/tmux-sessionizer.png")
-[PDF Browsing]("./assets/open-pdf.png")
+![Locaion Browsing]("./assets/tmux-sessionizer.png")
+![PDF Browsing]("./assets/open-pdf.png")
 
 ## Features
 
