@@ -16,7 +16,7 @@ else
     # Get search paths from tmux option or use defaults
     search_paths=$(tmux show-option -gqv "@zenflow-search-paths")
     if [[ -z "$search_paths" ]]; then
-        search_paths="~/ ~/.config ~/Bounty ~/Codes ~/Codes/* ~/CyberSec ~/Development ~/Documents ~/Downloads ~/Music ~/Obsidian ~/Pictures ~/Tools ~/Videos"
+        search_paths="~/ ~/.config ~/Bounty ~/Codes ~/Codes/* ~/CyberSec ~/Development ~/Documents ~/Downloads ~/Music ~/Notes ~/Pictures ~/Tools ~/Videos"
     fi
     
     # Use eval to expand the paths properly

@@ -85,7 +85,7 @@ set -g @zenflow-pdf-viewer 'evince'      # Default: zathura
 - `~/Documents`
 - `~/Downloads`
 - `~/Music`
-- `~/Obsidian`
+- `~/Notes`
 - `~/Pictures`
 - `~/Tools`
 - `~/Videos`
