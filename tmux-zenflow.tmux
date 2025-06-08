@@ -31,4 +31,4 @@ tmux bind-key "$sessionizer_key" display-popup -E -w "$popup_width" -h "$popup_h
 
 tmux bind-key "$new_session_key" display-popup -E -w "$popup_width" -h "$popup_height" "'$CURRENT_DIR/scripts/tmux-sessionizer.sh' new"
 
-tmux bind-key "$pdf_key" display-popup -E -w "$popup_width" -h "$popup_height" -x C -y C "'$CURRENT_DIR/scripts/open-pdf.sh'"
+tmux bind-key "$pdf_key" display-popup -E -w "$popup_width" -h "$popup_height" -x C -y C "'$CURRENT_DIR/scripts/tmux-open-pdf.sh'"
