@@ -1,13 +1,21 @@
 # tmux-zenflow
 
-A tmux plugin for zen workflow management - quickly navigate directories with sessionizer and open PDFs in a beautiful popup interface.
+A tmux plugin for zen workflow management - quickly navigate directories with sessionizer (popup with fuzzy finder), manage sessions and open PDFs in a beautiful popup interface.
 
+### Sessionizer
 ![Location Browsing](./assets/tmux-sessionizer.png)
+
+### Session Manager
+![Session Manager](./assets/session-manager.png)
+
+### Open PDF
 ![PDF Browsing](./assets/open-pdf.png)
+
 
 ## Features
 
 - **Sessionizer**: Quickly create new tmux sessions or windows from selected directories
+- **Session Manager**: Manage tmux sessions with an interactive popup
 - **PDF Opener**: Browse and open PDF files with preview
 - **Popup Interface**: Clean, centered popup windows for better UX
 - **Highly Configurable**: Customize key bindings, search paths, and appearance
@@ -40,6 +48,7 @@ Default key bindings:
 
 - `prefix + f`: Open sessionizer (creates new window in current session)
 - `prefix + F`: Open sessionizer (creates new session)  
+- `prefix + s`: Open session manager   
 - `prefix + o`: Open PDF browser
 
 ## Configuration
@@ -50,6 +59,7 @@ You can customize the plugin by adding these options to your `~/.tmux.conf`:
 ```bash
 set -g @zenflow-sessionizer-key 'f'      # Default: f
 set -g @zenflow-new-session-key 'F'      # Default: F  
+set -g @zenflow-sessionizer-key 's'      # Default: s
 set -g @zenflow-pdf-key 'o'              # Default: o
 ```
 

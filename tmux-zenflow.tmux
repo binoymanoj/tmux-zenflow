@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Tmux Zenflow Plugin
 # Author: Binoy Manoj
+# GitHub: https://github.com/binoymanoj/tmux-zenflow
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
@@ -8,6 +9,7 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 default_sessionizer_key="@zenflow-sessionizer-key"
 default_new_session_key="@zenflow-new-session-key" 
 default_pdf_key="@zenflow-pdf-key"
+default_session_manager_key="@zenflow-session-manager-key"
 
 # Get user-defined keys or use defaults
 sessionizer_key=$(tmux show-option -gqv "$default_sessionizer_key")
@@ -19,6 +21,9 @@ new_session_key=${new_session_key:-"F"}
 pdf_key=$(tmux show-option -gqv "$default_pdf_key")
 pdf_key=${pdf_key:-"o"}
 
+session_manager_key=$(tmux show-option -gqv "$default_session_manager_key")
+session_manager_key=${session_manager_key:-"s"}
+
 # Default popup dimensions - users can override
 popup_width=$(tmux show-option -gqv "@zenflow-popup-width")
 popup_width=${popup_width:-"60%"}
@@ -28,7 +33,6 @@ popup_height=${popup_height:-"60%"}
 
 # Bind keys with popup functionality
 tmux bind-key "$sessionizer_key" display-popup -E -w "$popup_width" -h "$popup_height" "'$CURRENT_DIR/scripts/tmux-sessionizer.sh'"
-
 tmux bind-key "$new_session_key" display-popup -E -w "$popup_width" -h "$popup_height" "'$CURRENT_DIR/scripts/tmux-sessionizer.sh' new"
-
 tmux bind-key "$pdf_key" display-popup -E -w "$popup_width" -h "$popup_height" -x C -y C "'$CURRENT_DIR/scripts/tmux-open-pdf.sh'"
+tmux bind-key "$session_manager_key" display-popup -E -w "$popup_width" -h "$popup_height" "'$CURRENT_DIR/scripts/tmux-session-manager.sh'"
